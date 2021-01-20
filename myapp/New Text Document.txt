@@ -1,0 +1,112 @@
+package com.rrbofficial.btrapplock;
+
+import android.content.Context;
+import android.content.Intent;
+import android.media.AudioManager;
+import android.media.audiofx.BassBoost;
+import android.provider.Settings;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.Toast;
+
+public class status extends AppCompatActivity {
+        ImageView  deviceid , deciceinfo , silent , vibrate , general , owener ;
+        SeekBar lightBar ;
+        Context context;
+        int sbrightness ;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_status);
+
+
+        lightBar=(SeekBar)findViewById(R.id.seekbar2);
+        context=getApplicationContext();
+        sbrightness= Settings.System.getInt(context.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS , 0);
+        lightBar.setProgress(sbrightness);
+        lightBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                //here brightness change hoel jevha seekbar touch hoel
+                Settings.System.putInt(context.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS , progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+    deviceid=(ImageView)findViewById(R.id.deviceidimg);
+        deciceinfo=(ImageView)findViewById(R.id.deviceinfoimg);
+        silent=(ImageView)findViewById(R.id.silentimg);
+        vibrate=(ImageView)findViewById(R.id.vibrationimg);
+        general=(ImageView)findViewById(R.id.generalimg);
+        owener=(ImageView)findViewById(R.id.owenerinfo);
+
+        deciceinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it =(new Intent(status.this,deviceinfo.class));
+                startActivity(it);
+            }
+        });
+
+        deviceid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it =(new Intent(status.this,deviceid.class));
+                startActivity(it);
+            }
+        });
+
+        final AudioManager audioManager =(AudioManager) getSystemService(getApplicationContext().AUDIO_SERVICE);
+            vibrate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+                    Toast.makeText(status.this, "VIBRATION MODE ACTIVATE!",Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
+        silent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
+                Toast.makeText(status.this, "SILENT MODE ACTIVATE!",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        general.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+                Toast.makeText(status.this, "GENERAL MODE ACTIVATED!",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        owener.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it =(new Intent(status.this,operator.class));
+                startActivity(it);
+            }
+        });
+
+    }
+
+
+}

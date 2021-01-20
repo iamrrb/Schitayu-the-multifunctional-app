@@ -1,0 +1,240 @@
+package com.rrbofficial.btrapplock;
+
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.ImageView;
+
+
+public class home extends Activity {
+
+    ImageView camera, faculty, phone, notes,contactimg,Feedback, flashlg, gallary, status, gcoeawall,gcoeasite, thanks,developers, smsicon,updater;
+
+
+    public static final int REQUEST_LOCATION = 10;
+    private static final int REQUEST_PERMISSIONS = 20;
+    private DrawerLayout mDrawerLayout ;
+    private ActionBarDrawerToggle mToggle ;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+
+
+
+        int permission_All = 1;
+
+        String[] Permissions = {Manifest.permission.CAMERA, Manifest.permission.CALL_PHONE,
+                Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_CONTACTS,
+                Manifest.permission.SEND_SMS, Manifest.permission.MEDIA_CONTENT_CONTROL,
+                Manifest.permission.INTERNET
+        };
+
+        if (!hasPermissions(this, Permissions)) {
+
+            ActivityCompat.requestPermissions(this, Permissions, permission_All);
+
+        }
+
+
+        //developers= (ImageView) findViewById(R.id.developersid);
+        //  contactimg = (ImageView) findViewById(R.id.contacts);
+        //  smsicon = (ImageView) findViewById(R.id.smsicon);
+       // camera = (ImageView) findViewById(R.id.cameraimg);
+        // faculty = (ImageView) findViewById(R.id.facultyinchare);
+       // phone = (ImageView) findViewById(R.id.phoneimg);
+      //  notes = (ImageView) findViewById(R.id.notesimg);
+      //  flashlg = (ImageView) findViewById(R.id.flashlightimg);
+      //  gallary = (ImageView) findViewById(R.id.gallaryimg);
+     //   gcoeawall = (ImageView) findViewById(R.id.wallpaper);
+     //   status = (ImageView) findViewById(R.id.statusimg);
+       // gcoeasite= (ImageView) findViewById(R.id.gcoeasite);
+        // Feedback= (ImageView) findViewById(R.id.feedback);
+
+        developers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent(home.this, developers.class);
+                startActivity(it);
+            }
+        });
+
+
+        updater.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent();
+                it.setAction(Intent.ACTION_SEND);
+                getIntent().putExtra(Intent.EXTRA_TEXT,"APPLINK");
+                getIntent().setType("text/plain");
+                startActivity(Intent.createChooser(it,"Choose App you like to share"));
+            }
+        });
+
+        gcoeasite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent(home.this, gcoeasite.class);
+                startActivity(it);
+            }
+        });
+
+
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent(home.this, phone.class);
+                startActivity(it);
+            }
+        });
+
+
+
+
+        thanks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent(home.this, rone.class);
+                startActivity(it);
+            }
+        });
+
+        flashlg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent(home.this, flashlight.class);
+                startActivity(it);
+            }
+        });
+
+        faculty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent(home.this, fact_act.class);
+                startActivity(it);
+            }
+        });
+
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(home.this, camera_act.class);
+                startActivity(it);
+
+            }
+        });
+
+
+        notes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(home.this, MainActivity.class);
+                startActivity(it);
+            }
+        });
+
+
+
+        gcoeawall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(home.this, gcoea_wall.class);
+                startActivity(it);
+            }
+        });
+
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(home.this, mydevice.class);
+                startActivity(it);
+            }
+        });
+
+
+        smsicon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(home.this, sms.class);
+                startActivity(it);
+            }
+        });
+
+        contactimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(home.this, contacts.class);
+
+                startActivity(it);
+            }
+        });
+
+        Feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent it = new Intent(home.this, feedback.class);
+                startActivity(it);
+            }
+        });
+
+
+
+    }
+
+    private void setCancelable(boolean b) {
+    }
+
+
+    private static boolean hasPermissions(Context context, String... permissions)
+
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && permissions != null) {
+            for (String permission : permissions) {
+
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+
+        return false;
+    }
+
+}
+
+
+
+

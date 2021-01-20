@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "399462901378",
+    "firebase_url": "https://gcoean-s-schitayu.firebaseio.com",
+    "project_id": "gcoean-s-schitayu",
+    "storage_bucket": "gcoean-s-schitayu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399462901378:android:ca7ea8467f02257d",
+        "android_client_info": {
+          "package_name": "com.rrbofficial.btrapplock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399462901378-6u0ovq4nkg1avo5r03p140afii22hhpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWz6WlfACUm6J5LcDmYMi_T6-yWy15yGA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

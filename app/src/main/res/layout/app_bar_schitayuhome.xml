@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rrbofficial.btrapplock.schitayuhome">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_schitayuhome" />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiple_actions"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|right"
+        app:fab_addButtonPlusIconColor="@color/lightblue"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/schitayucolor"
+        app:fab_labelStyle="@style/menu_labels_style"
+        >
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fmike"
+            app:fab_colorNormal="@color/white"
+            app:fab_title="@string/mike"
+            app:fab_icon="@drawable/ic_mic_black_24dp"
+            app:fab_size="mini"
+            android:onClick="fmike"
+            app:fab_addButtonColorPressed="@color/schitayucolor"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fshare"
+            app:fab_colorNormal="@color/white"
+            app:fab_icon="@drawable/ic_mic_black_24dp"
+            app:fab_title="@string/shareapp"
+            app:fab_size="mini"
+            android:onClick="fshare"
+            app:fab_addButtonColorPressed="@color/schitayucolor"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/frate"
+            app:fab_colorNormal="@color/white"
+            app:fab_icon="@drawable/fmike"
+            app:fab_title="@string/Rateapp"
+            app:fab_size="mini"
+            app:fab_addButtonColorPressed="@color/schitayucolor"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ftv"
+            app:fab_colorNormal="@color/white"
+            app:fab_icon="@drawable/fmike"
+            app:fab_title="@string/SchitayuTV"
+            app:fab_size="mini"
+            android:onClick="ftv"
+            app:fab_addButtonColorPressed="@color/schitayucolor"
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fsocial"
+            app:fab_icon="@drawable/fmike"
+            app:fab_colorNormal="@color/white"
+            app:fab_size="mini"
+            app:fab_title="@string/Esocial"
+            android:onClick="fsocial"
+            app:fab_addButtonColorPressed="@color/schitayucolor"
+            />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</android.support.design.widget.CoordinatorLayout>

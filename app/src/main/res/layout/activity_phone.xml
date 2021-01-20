@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backcall"
+    tools:context="com.rrbofficial.btrapplock.phone">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/et_phone"
+        android:layout_marginTop="200dp"
+        android:hint="enter your number"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:id="@+id/callimage"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/callbutton"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+package com.rrbofficial.btrapplock;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class mydevice extends AppCompatActivity {
+
+
+    ImageView youtube,silent ,vibration,tutorialpt ,general ,wwe, voot, hotstar,crickbuzz ,fb,operatorinfo ,deviceinfo,deviceid,battry,insta ;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mydevice);
+
+
+        silent=(ImageView)findViewById(R.id.silent);
+        battry=(ImageView)findViewById(R.id.battry);
+        vibration=(ImageView)findViewById(R.id.vibrate);
+        general=(ImageView)findViewById(R.id.general);
+        wwe=(ImageView)findViewById(R.id.wwe);
+        voot=(ImageView)findViewById(R.id.voot);
+        hotstar=(ImageView)findViewById(R.id.hotstar);
+        deviceinfo=(ImageView)findViewById(R.id.deviceinfo);
+        deviceid=(ImageView)findViewById(R.id.deviceid);
+        tutorialpt=(ImageView)findViewById(R.id.tutorialspt);
+        youtube=(ImageView)findViewById(R.id.youtubeimg);
+        insta=(ImageView)findViewById(R.id.instagram);
+        crickbuzz=(ImageView)findViewById(R.id.crikbuzz);
+        deviceid=(ImageView)findViewById(R.id.oinfo);
+
+
+
+
+
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,youtube.class);
+                startActivity(it);
+
+            }
+        });
+
+        vibration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+
+        silent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+
+        vibration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+
+        hotstar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,hotstar.class);
+                startActivity(it);
+
+            }
+        });
+
+        wwe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,wwe.class);
+                startActivity(it);
+
+            }
+        });
+
+        tutorialpt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,tutorialspoint.class);
+                startActivity(it);
+
+            }
+        });
+
+        operatorinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,operator.class);
+                startActivity(it);
+
+            }
+        });
+
+        deviceid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,deviceid.class);
+                startActivity(it);
+
+            }
+        });
+
+
+        deviceinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,deviceinfo.class);
+                startActivity(it);
+
+            }
+        });
+
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,fb.class);
+                startActivity(it);
+
+            }
+        });
+
+
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,insta.class);
+                startActivity(it);
+
+            }
+        });
+
+        voot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,voot.class);
+                startActivity(it);
+
+            }
+        });
+
+        crickbuzz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(mydevice.this,crickbuzz.class);
+                startActivity(it);
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

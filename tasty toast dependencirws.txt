@@ -1,0 +1,1 @@
+compile 'com.sdsmdg.tastytoast:tastytoast:0.1.1'

@@ -1,0 +1,5 @@
+<root>
+    <item name='android.Manifest'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

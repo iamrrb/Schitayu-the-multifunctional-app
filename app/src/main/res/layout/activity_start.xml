@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/databasesplash"
+    android:layout_height="match_parent"
+    tools:context="com.rrbofficial.btrapplock.StartActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="500dp"
+    android:gravity="center"
+    >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="ALREADY HAVE AN ACCOUNT"
+        android:id="@+id/start_log_btn"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREATE SCHITAYU ACCOUNT"
+        android:id="@+id/start_reg_btn"
+        />
+
+</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rrbofficial.btrapplock.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET PATTERN LOCK "
+        android:layout_gravity="center_horizontal"
+        android:textSize="24sp"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#333639"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.andrognito.patternlockview.PatternLockView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/pattern_lock_view"
+        />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnSetPattern"
+        android:text="SET PATTERN"
+        android:background="@drawable/button_backgroundsquare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cautionsimg"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warning /Cautions :Once you set the pattern lock,it'll not be reset again.. !"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For resetting pattern lock just follow : Settings>Installed apps>Schitayu>Appdata>clear"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oneset"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/twoset"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/threeset"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fourset"
+        />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+
